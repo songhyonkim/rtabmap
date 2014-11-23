@@ -36,7 +36,8 @@
 <h1>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
 
-<p><strong>RTAB-Map</strong> (Real-Time Appearance-Based Mapping) is a RGB-D Graph SLAM approach based on a global Bayesian loop closure detector. The loop closure detector uses a bag-of-words approach to determinate how likely a new image comes from a previous location or a new location. When a loop closure hypothesis is accepted, a new constraint is added to the map's graph, then a graph optimizer minimizes the errors in the map. A memory management approach is used to limit the number of locations used for loop closure detection and graph optimization, so that real-time constraints on large-scale environnements are always respected. RTAB-Map can be used alone with a hand-held Kinect or stereo camera for 6DoF RGB-D mapping, or on a robot equipped with a laser rangefinder for 3DoF mapping.</p>
+<p><img src="https://raw.githubusercontent.com/introlab/rtabmap/master/guilib/src/images/RTAB-Map.png" alt="RTAB-Map logo" title="RTAB-Map" align="left" width="100">
+<strong>RTAB-Map</strong> (Real-Time Appearance-Based Mapping) is a RGB-D Graph SLAM approach based on a global Bayesian loop closure detector. The loop closure detector uses a bag-of-words approach to determinate how likely a new image comes from a previous location or a new location. When a loop closure hypothesis is accepted, a new constraint is added to the map's graph, then a graph optimizer minimizes the errors in the map. A memory management approach is used to limit the number of locations used for loop closure detection and graph optimization, so that real-time constraints on large-scale environnements are always respected. RTAB-Map can be used alone with a hand-held Kinect or stereo camera for 6DoF RGB-D mapping, or on a robot equipped with a laser rangefinder for 3DoF mapping.</p>
 
 <ul>
 <li>
@@ -70,7 +71,7 @@
 <h1>
 <a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
 
-<p>| <a href="https://code.google.com/p/rtabmap/wiki/Installation#ROS_version"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/ros.png" alt="ROS" width="50"></a> | <a href="https://code.google.com/p/rtabmap/wiki/Installation#Ubuntu"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/ubuntu.png" alt="Ubuntu" width="50"></a> | <a href="https://code.google.com/p/rtabmap/wiki/Installation#Mac_OS_X"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/apple.jpg" alt="Mac OS X" width="50"></a> | <a href="https://code.google.com/p/rtabmap/wiki/Installation#Windows"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/windows.png" alt="Windows" width="50"></a> | </p>
+<p><a href="https://code.google.com/p/rtabmap/wiki/Installation#ROS_version"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/ros.png" alt="ROS" width="50"></a> | <a href="https://code.google.com/p/rtabmap/wiki/Installation#Ubuntu"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/ubuntu.png" alt="Ubuntu" width="50"></a> | <a href="https://code.google.com/p/rtabmap/wiki/Installation#Mac_OS_X"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/apple.jpg" alt="Mac OS X" width="50"></a> | <a href="https://code.google.com/p/rtabmap/wiki/Installation#Windows"><img src="https://rtabmap.googlecode.com/svn/trunk/doc/logos/windows.png" alt="Windows" width="50"></a></p>
 
 <ul>
 <li>
@@ -125,7 +126,8 @@
 
 <ul>
 <li>I added a <a href="http://official-rtab-map-forum.67519.x6.nabble.com/">RTAB-Map Forum</a> to ask questions, so it will easier to share answers with the community.</li>
-<li>New version 0.7.0:
+<li>
+<p>New version 0.7.0:</p>
 
 <ul>
 <li>Calibration tool in the Source panel in Preferences.</li>
@@ -141,18 +143,21 @@
 </li>
 <li>Windows installer: <a href="http://bit.ly/1qSgELI">RTABMap-0.7.0-win64.exe</a>
 </li>
-<li>New example to speed up RTAB-Map, see the page <a href="https://code.google.com/p/rtabmap/wiki/FastRGBDMapping">FastRGBDMapping</a>:
-<a href="http://www.youtube.com/watch?v=Bh8WZsU4YC8"><img src="http://img.youtube.com/vi/Bh8WZsU4YC8/0.jpg" alt="video"></a>
-</li>
+<li>New example to speed up RTAB-Map, see the page <a href="https://code.google.com/p/rtabmap/wiki/FastRGBDMapping">FastRGBDMapping</a>:</li>
 </ul>
+
+<p><a href="http://www.youtube.com/watch?v=Bh8WZsU4YC8"><img src="http://img.youtube.com/vi/Bh8WZsU4YC8/0.jpg" alt="video"></a></p>
 </li>
 </ul>
 
 <p>September 2014</p>
 
 <ul>
-<li>At <strong>IROS 2014</strong> in Chicago, a team using RTAB-Map for SLAM <strong>won</strong> the Kinect navigation contest held during the conference. See their press release for more details: <a href="http://www.meetup.com/SV-ROS-users/pages/Winning_the_IROS2014_Microsoft_Connect_Challenge/">Winning the IROS2014 Microsoft Kinect Challenge</a>. I also added the Wiki page <a href="https://code.google.com/p/rtabmap/wiki/IROS2014KinectChallenge">IROS2014KinectChallenge</a> showing in details the RTAB-Map part used in their solution.
-<a href="http://www.youtube.com/watch?v=_qiLAWp7AqQ"><img src="http://img.youtube.com/vi/_qiLAWp7AqQ/0.jpg" alt="video"></a> </li>
+<li>
+<p>At <strong>IROS 2014</strong> in Chicago, a team using RTAB-Map for SLAM <strong>won</strong> the Kinect navigation contest held during the conference. See their press release for more details: <a href="http://www.meetup.com/SV-ROS-users/pages/Winning_the_IROS2014_Microsoft_Connect_Challenge/">Winning the IROS2014 Microsoft Kinect Challenge</a>. I also added the Wiki page <a href="https://code.google.com/p/rtabmap/wiki/IROS2014KinectChallenge">IROS2014KinectChallenge</a> showing in details the RTAB-Map part used in their solution.</p>
+
+<p><a href="http://www.youtube.com/watch?v=_qiLAWp7AqQ"><img src="http://img.youtube.com/vi/_qiLAWp7AqQ/0.jpg" alt="video"></a> </p>
+</li>
 </ul>
 
 <p>August 2014</p>
@@ -165,15 +170,20 @@
 <li><a href="https://github.com/introlab/rtabmap-ros-pkg">GitHub for RTAB-Map's ROS package</a></li>
 </ul>
 </li>
-<li>Here a comparison between reality and what can be shown in RVIZ (you can <a href="https://code.google.com/p/rtabmap/wiki/ROS?ts=1408024477&amp;updated=ROS#Robot_mapping_with_Find-Object">reproduce this demo here</a>):
-<a href="http://www.youtube.com/watch?v=o1GSQanY-Do"><img src="http://img.youtube.com/vi/o1GSQanY-Do/0.jpg" alt="video"></a> </li>
+<li>
+<p>Here a comparison between reality and what can be shown in RVIZ (you can <a href="https://code.google.com/p/rtabmap/wiki/ROS?ts=1408024477&amp;updated=ROS#Robot_mapping_with_Find-Object">reproduce this demo here</a>):</p>
+
+<p><a href="http://www.youtube.com/watch?v=o1GSQanY-Do"><img src="http://img.youtube.com/vi/o1GSQanY-Do/0.jpg" alt="video"></a> </p>
+</li>
 </ul>
 
 <p>July 2014</p>
 
 <ul>
-<li>Added <a href="https://code.google.com/p/rtabmap/wiki/SetupOnYourRobot">Setup on your robot</a> wiki page to know how to integrate RTAB-Map on your ROS robot. Multiple sensor configurations are shown but the optimal configuration is to have a 2D laser, a Kinect-like sensor and odometry.
-<img src="http://rtabmap.googlecode.com/svn/trunk/doc/Tutorials/MultiSession/4.png" alt="AZIMUT3">
+<li>
+<p>Added <a href="https://code.google.com/p/rtabmap/wiki/SetupOnYourRobot">Setup on your robot</a> wiki page to know how to integrate RTAB-Map on your ROS robot. Multiple sensor configurations are shown but the optimal configuration is to have a 2D laser, a Kinect-like sensor and odometry.</p>
+
+<p><img src="http://rtabmap.googlecode.com/svn/trunk/doc/Tutorials/MultiSession/4.png" alt="AZIMUT3"></p>
 </li>
 </ul>
 
@@ -195,8 +205,11 @@
 <p>June 2014</p>
 
 <ul>
-<li><p>I'm glad to announce that my paper submitted to <a href="http://www.iros2014.org/">IROS 2014</a> was accepted! <a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/images/e/eb/Labbe14-IROS.pdf">This paper</a> explains in details how RGB-D mapping with RTAB-Map is done. Results shown in this paper can be reproduced by the <a href="https://code.google.com/p/rtabmap/wiki/MultiSessionDemo">Multi-session mapping</a> tutorial:
-<a href="https://code.google.com/p/rtabmap/wiki/MultiSessionDemo"><img src="http://rtabmap.googlecode.com/svn/trunk/doc/Tutorials/MultiSession/3.png" alt="Multi-session mapping" width="800"></a></p></li>
+<li>
+<p>I'm glad to announce that my paper submitted to <a href="http://www.iros2014.org/">IROS 2014</a> was accepted! <a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/images/e/eb/Labbe14-IROS.pdf">This paper</a> explains in details how RGB-D mapping with RTAB-Map is done. Results shown in this paper can be reproduced by the <a href="https://code.google.com/p/rtabmap/wiki/MultiSessionDemo">Multi-session mapping</a> tutorial:</p>
+
+<p><a href="https://code.google.com/p/rtabmap/wiki/MultiSessionDemo"><img src="http://rtabmap.googlecode.com/svn/trunk/doc/Tutorials/MultiSession/3.png" alt="Multi-session mapping" width="800"></a></p>
+</li>
 <li>
 <p>Release 0.6.4</p>
 
@@ -224,13 +237,17 @@
 <h1>
 <a id="videos" class="anchor" href="#videos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Videos</h1>
 
-<p><em>RGBD-SLAM</em>: 
- <a href="http://www.youtube.com/watch?v=Nm2ggyAW4rw"><img src="http://img.youtube.com/vi/Nm2ggyAW4rw/0.jpg" alt="video"></a>
- <a href="http://www.youtube.com/watch?v=joV7VCvGrKM"><img src="http://img.youtube.com/vi/joV7VCvGrKM/0.jpg" alt="video"></a></p>
+<p><em>RGBD-SLAM</em>: </p>
 
-<p><em>Appearance-based loop closure detection</em>:
- <a href="http://www.youtube.com/watch?v=CAk-QGMlQmI"><img src="http://img.youtube.com/vi/CAk-QGMlQmI/0.jpg" alt="video"></a>
- <a href="http://www.youtube.com/watch?v=1dImRinTJSE"><img src="http://img.youtube.com/vi/1dImRinTJSE/0.jpg" alt="video"></a></p>
+<p><a href="http://www.youtube.com/watch?v=Nm2ggyAW4rw"><img src="http://img.youtube.com/vi/Nm2ggyAW4rw/0.jpg" alt="video"></a></p>
+
+<p><a href="http://www.youtube.com/watch?v=joV7VCvGrKM"><img src="http://img.youtube.com/vi/joV7VCvGrKM/0.jpg" alt="video"></a></p>
+
+<p><em>Appearance-based loop closure detection</em>:</p>
+
+<p><a href="http://www.youtube.com/watch?v=CAk-QGMlQmI"><img src="http://img.youtube.com/vi/CAk-QGMlQmI/0.jpg" alt="video"></a></p>
+
+<p><a href="http://www.youtube.com/watch?v=1dImRinTJSE"><img src="http://img.youtube.com/vi/1dImRinTJSE/0.jpg" alt="video"></a></p>
 
 <p><strong>More videos <a href="http://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">here</a></strong>.</p>
 
