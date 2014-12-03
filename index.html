@@ -33,8 +33,8 @@
       <section id="main_content" class="inner">
         <p><a href="http://www.youtube.com/watch?v=AMLwjo80WzI"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/onlinergbdslam.jpeg" alt="video"></a></p>
 
-<h1>
-<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
 
 <p><img src="https://raw.githubusercontent.com/introlab/rtabmap/master/guilib/src/images/RTAB-Map.png" alt="RTAB-Map logo" title="RTAB-Map" align="left" width="120">
 <strong>RTAB-Map</strong> (Real-Time Appearance-Based Mapping) is a RGB-D Graph SLAM approach based on a global Bayesian loop closure detector. The loop closure detector uses a bag-of-words approach to determinate how likely a new image comes from a previous location or a new location. When a loop closure hypothesis is accepted, a new constraint is added to the map's graph, then a graph optimizer minimizes the errors in the map. A memory management approach is used to limit the number of locations used for loop closure detection and graph optimization, so that real-time constraints on large-scale environnements are always respected. RTAB-Map can be used alone with a hand-held Kinect or stereo camera for 6DoF RGB-D mapping, or on a robot equipped with a laser rangefinder for 3DoF mapping.
@@ -46,7 +46,7 @@
 
 <ul>
 <li>M. Labbé and F. Michaud, “<a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/images/e/eb/Labbe14-IROS.pdf">Online Global Loop Closure Detection for Large-Scale Multi-Session Graph-Based SLAM</a>,” in <em>Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems</em>, 2014. (<a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6942926">IEEE Xplore</a>)</li>
-<li>Results shown in this paper can be reproduced by the [MultiSessionDemo Multi-session mapping] tutorial.</li>
+<li>Results shown in this paper can be reproduced by the <a href="https://github.com/introlab/rtabmap/wiki/Multi-session">Multi-session mapping</a> tutorial.</li>
 </ul>
 </li>
 <li>
@@ -55,23 +55,13 @@
 <ul>
 <li>M. Labbé and F. Michaud, “<a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/images/b/bc/TRO2013.pdf">Appearance-Based Loop Closure Detection for Online Large-Scale and Long-Term Operation</a>,” in <em>IEEE Transactions on Robotics</em>, vol. 29, no. 3, pp. 734-745, 2013. (<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6459608">IEEE Xplore</a>)</li>
 <li>M. Labbé and F. Michaud, “<a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/images/f/f0/Labbe11memory.pdf">Memory management for real-time appearance-based loop closure detection</a>,” in <em>Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems</em>, 2011, pp. 1271–1276. (<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6094602">IEEE Xplore</a>)</li>
-<li>** Please visit <a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">RTAB-Map's page on IntRoLab</a> for detailed information on the loop closure detection approach. ** </li>
+<li>Visit <a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">RTAB-Map's page on IntRoLab</a> for detailed information on the loop closure detection approach and related datasets. </li>
 </ul>
 </li>
 </ul>
 
-<p>Under the hood :</p>
-
-<ul>
-<li>Loop closure hypotheses are evaluated using a Bayes filter.</li>
-<li>Image matching is done using a "bag-of-words" approach (with SURF features - OpenCV).</li>
-<li>Graph optimization is done with <a href="https://www.openslam.org/toro.html">TORO</a>.</li>
-<li>Memory is divided into short-term, working and long-term memories.</li>
-<li>Sqlite3 database is used for the long-term memory.</li>
-</ul>
-
-<h1>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
 
 <p><a href="https://github.com/introlab/rtabmap_ros#rtabmap_ros"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/logos/ros.png" alt="ROS" width="50"></a>  <a href="https://github.com/introlab/rtabmap/wiki/Installation#ubuntu"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/logos/ubuntu.png" alt="Ubuntu" width="50"></a>  <a href="https://github.com/introlab/rtabmap/wiki/Installation#macosx"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/logos/apple.png" alt="Mac OS X" width="50"></a>  <a href="https://github.com/introlab/rtabmap/wiki/Installation#windows"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/logos/windows.png" alt="Windows" width="50"></a> </p>
 
@@ -85,8 +75,8 @@
 <li>For <strong>ROS</strong> users, take a look to <a href="http://wiki.ros.org/rtabmap">rtabmap</a> page on the ROS wiki for a package overview. See also <a href="http://wiki.ros.org/rtabmap_ros/Tutorials/SetupOnYourRobot">SetupOnYourRobot</a> to know how to integrate RTAB-Map on your robot.</li>
 </ul>
 
-<h2>
-<a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h2>
+<h3>
+<a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h3>
 
 <ul>
 <li>
@@ -125,8 +115,8 @@
 </li>
 </ul>
 
-<h1>
-<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h1>
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
 
 <ul>
 <li>
@@ -141,38 +131,22 @@
 </li>
 </ul>
 
-<h1>
-<a id="whats-new" class="anchor" href="#whats-new" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's new</h1>
+<h2>
+<a id="whats-new" class="anchor" href="#whats-new" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's new</h2>
 
-<p>October 2014</p>
-
-<ul>
-<li>I added a <a href="http://official-rtab-map-forum.67519.x6.nabble.com/">RTAB-Map Forum</a> to ask questions, so it will easier to share answers with the community.</li>
-<li>
-<p>New version 0.7.0:</p>
+<h3>
+<a id="october-2014" class="anchor" href="#october-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>October 2014</h3>
 
 <ul>
-<li>Calibration tool in the Source panel in Preferences.</li>
-<li>Binary features can be used for loop closure detection.</li>
 <li>
-<a href="https://github.com/introlab/rtabmap/wiki/Tools#Database_viewer">DatabaseViewer</a> can remove/add manually loop closures.</li>
-<li>Added exportation dialog (*.ply *.pcd).</li>
-<li>ROS: <a href="http://wiki.ros.org/rtabmap_ros#RVIZ_plugins">rviz plugins</a>: MapCloudDisplay, InfoDisplay, MapGraphDisplay.</li>
-<li>Downloads:</li>
-<li>Source: <a href="http://bit.ly/1powfmG">RTABMap-0.7.0-Source.zip</a>
-</li>
-<li>Windows binary: <a href="http://bit.ly/1mM3pRs">RTABMap-0.7.0-win64.zip</a>
-</li>
-<li>Windows installer: <a href="http://bit.ly/1qSgELI">RTABMap-0.7.0-win64.exe</a>
-</li>
-<li>New example to speed up RTAB-Map, see the page <a href="https://github.com/introlab/rtabmap/wiki/FastRGBDMapping">FastRGBDMapping</a>:</li>
-</ul>
+<p>New example to speed up RTAB-Map's odometry, see <a href="https://github.com/introlab/rtabmap/wiki/FastRGBDMapping">this page</a>:</p>
 
 <p><a href="http://www.youtube.com/watch?v=Bh8WZsU4YC8"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/speedup.jpeg" alt="video"></a></p>
 </li>
 </ul>
 
-<p>September 2014</p>
+<h3>
+<a id="september-2014" class="anchor" href="#september-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>September 2014</h3>
 
 <ul>
 <li>
@@ -182,16 +156,10 @@
 </li>
 </ul>
 
-<p>August 2014</p>
+<h3>
+<a id="august-2014" class="anchor" href="#august-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>August 2014</h3>
 
 <ul>
-<li>I did a fork of the source code for GitHub and I will keep it synchronized with the svn here. It will be easier for you to customize the code with a fork on GitHub.
-
-<ul>
-<li><a href="https://github.com/introlab/rtabmap">GitHub for RTAB-Map</a></li>
-<li><a href="https://github.com/introlab/rtabmap_ros">GitHub for RTAB-Map's ROS package</a></li>
-</ul>
-</li>
 <li>
 <p>Here a comparison between reality and what can be shown in RVIZ (you can <a href="http://wiki.ros.org/rtabmap_ros#Robot_mapping_with_Find-Object">reproduce this demo here</a>):</p>
 
@@ -199,15 +167,14 @@
 </li>
 </ul>
 
-<p>July 2014</p>
+<h3>
+<a id="july-2014" class="anchor" href="#july-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>July 2014</h3>
 
 <ul>
 <li>
 <p>Added <a href="http://wiki.ros.org/rtabmap_ros/Tutorials/SetupOnYourRobot">Setup on your robot</a> wiki page to know how to integrate RTAB-Map on your ROS robot. Multiple sensor configurations are shown but the optimal configuration is to have a 2D laser, a Kinect-like sensor and odometry.</p>
 
 <p><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/Tutorials/MultiSession/4.png" alt="AZIMUT3" align="left" width="300"></p>
-</li>
-</ul>
 
 <table>
 <thead>
@@ -223,8 +190,11 @@
 </tr>
 </tbody>
 </table>
+</li>
+</ul>
 
-<p>June 2014</p>
+<h3>
+<a id="june-2014" class="anchor" href="#june-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>June 2014</h3>
 
 <ul>
 <li>
@@ -232,177 +202,30 @@
 
 <p><a href="https://github.com/introlab/rtabmap/wiki/Multi-session"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/Tutorials/MultiSession/3.png" alt="Multi-session mapping" width="600"></a></p>
 </li>
-<li>
-<p>Release 0.6.4</p>
+</ul>
+
+<h2>
+<a id="videos" class="anchor" href="#videos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Videos</h2>
 
 <ul>
 <li>
-<strong>Binaries!</strong> <a href="https://github.com/introlab/rtabmap/wiki/Installation#macosx"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/logos/apple.png" alt="Mac OS X" height="15"></a><a href="https://github.com/introlab/rtabmap/wiki/Installation#windows"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/logos/windows.png" alt="Windows" height="15"></a> See <a href="https://github.com/introlab/rtabmap/wiki/Installation">Installation</a> page for more information.</li>
-</ul>
-</li>
-<li>Release 0.6.3
+<p><strong>RGBD-SLAM</strong></p>
 
-<ul>
-<li>(r1330) New icon!</li>
-<li>(r1310) Freenect support.</li>
-<li>(r1335) Added cloud smoothing (Moving Least Squares) option when saving clouds.</li>
-<li>(r1334) Added a quality odometry threshold, turning the background yellow when the mapping area has too low features.</li>
-<li>(r1328) Fixed some building issues with OpenCV version: nonFree module explicitly required. This simplified installation for ROS Indigo (r1329).</li>
-<li>(r1342) rtabmap-databaseViewer: Added total path length under the Graph view.</li>
-<li>Some bug fixes.</li>
-</ul>
-</li>
-</ul>
-
-<p>Older news</p>
-
-<h1>
-<a id="videos" class="anchor" href="#videos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Videos</h1>
-
-<p><em>RGBD-SLAM</em>: </p>
-
-<p><a href="http://www.youtube.com/watch?v=Nm2ggyAW4rw"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/desktop.jpeg" alt="video"></a></p>
+<p><a href="http://www.youtube.com/watch?v=Nm2ggyAW4rw"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/desktop.jpeg" alt="video"></a> </p>
 
 <p><a href="http://www.youtube.com/watch?v=joV7VCvGrKM"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/globalonly.jpeg" alt="video"></a></p>
+</li>
+<li>
+<p><strong>Appearance-based loop closure detection</strong></p>
 
-<p><em>Appearance-based loop closure detection</em>:</p>
-
-<p><a href="http://www.youtube.com/watch?v=CAk-QGMlQmI"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/rtabmap.jpeg" alt="video"></a></p>
+<p><a href="http://www.youtube.com/watch?v=CAk-QGMlQmI"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/rtabmap.jpeg" alt="video"></a> </p>
 
 <p><a href="http://www.youtube.com/watch?v=1dImRinTJSE"><img src="https://raw.githubusercontent.com/wiki/introlab/rtabmap/doc/video_screenshots/newcollegeomni.jpeg" alt="video"></a></p>
 
-<p><strong>More videos <a href="http://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">here</a></strong>.</p>
-
-<p><a name="Older_news"></a></p>
-
-<h1>
-<a id="older-news" class="anchor" href="#older-news" aria-hidden="true"><span class="octicon octicon-link"></span></a>Older news</h1>
-
-<p>February 2014</p>
-
 <ul>
-<li>Release 0.6.2</li>
-<li>New <a href="https://github.com/introlab/rtabmap/wiki/Tools">Tools</a> page.</li>
-<li>Updated <a href="https://github.com/introlab/rtabmap/wiki/Tutorials">Tutorials</a> page (RGB-D mapping, multi-session mapping demos...).</li>
-<li>Updated <a href="http://wiki.ros.org/rtabmap_ros">ROS</a> usage and demos.</li>
-</ul>
-
-<p>December 2013</p>
-
-<ul>
-<li>Updated trunk to version 0.6.</li>
-<li>Ubuntu/ROS updated!
-
-<ul>
-<li>
-<em>ROS version</em>: Because RTAB-Map 0.6 requires PCL 1.7, ROS Hydro is required. The installation is now using Catkin. See the <a href="http://wiki.ros.org/rtabmap_ros">ROS</a> page for new RTAB-Map packages installation and usage. The "visual_slam" package doesn't exist anymore, all RGB-D features are handled directly in "rtabmap" package. The mapping demo (ROS bag) from "visual_slam" is updated to new package (see bottom of <a href="http://wiki.ros.org/rtabmap_ros#Demos">ROS</a> for launch files).</li>
-<li>Example of mapping with a hand-held Kinect (or OpenNI-compliant sensors): <a href="https://github.com/introlab/rtabmap-ros-pkg/blob/master/launch/rgbd_mapping.launch">rgbd_mapping.launch</a>
-</li>
-</ul>
-
-<pre><code>$ roslaunch openni_launch openni.launch depth_registration:=true
-$ roslaunch rtabmap_ros rgbd_mapping.launch
-</code></pre>
-
-<ul>
-<li>Ubuntu <strong>standalone version</strong>:</li>
-</ul>
-
-<pre><code>$ git clone https://github.com/introlab/rtabmap.git rtabmap
-$ cd rtabmap/build
-$ cmake ..
-$ make -j4
-$ make install
-$ rtabmap
-</code></pre>
-</li>
-</ul>
-
-<p>November 2013</p>
-
-<ul>
-<li>
-<em>(EDIT)</em> I re-uploaded the zip file with installers for OpenNI.</li>
-<li>Added a standalone demo version for RGB-D mapping on Windows 7.</li>
-<li>
-<a href="https://rtabmap.googlecode.com/files/RTAB-Map-0.6.0-win32-DEMO.zip">RTAB-Map-0.6.0-win32-DEMO.zip</a>.</li>
-<li>Install:
-
-<ul>
-<li>Unzip</li>
-<li>Install OpenNI-Win32-1.5.4-Dev.msi</li>
-<li>Install Sensor-Win-OpenSource32-5.1.0.msi</li>
-<li>Plug the Kinect</li>
-<li>Run bin/RTAB-Map.exe</li>
+<li>More loop closure detection videos <a href="http://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">here</a>.</li>
 </ul>
 </li>
-<li>What's included in the demo:
-
-<ul>
-<li>Hand-held Kinect RGBD mapping,</li>
-<li>Modes "Mapping" and "Localization" (that can be switched on-the-fly),</li>
-<li>Multiple maps management,</li>
-<li>Added a 3D map viewer directly in the RTAB-Map GUI,</li>
-<li>Three odometry approaches: </li>
-<li>SURF/SIFT (best quality), </li>
-<li>FAST/BRIEF (fast),</li>
-<li>ICP (slow but invariant to light),</li>
-<li>Save the resulting cloud to .pcd file.</li>
-</ul>
-</li>
-<li>(<strong>Ubuntu/ROS users</strong>) In the next weeks, the ROS package will be updated with the new features, and with an easier interface to use than the visual_slam package (all the RGBD stuff will be included directly in the rtabmap package).</li>
-</ul>
-
-<p>June 2013</p>
-
-<ul>
-<li>Added new demos (mapping 2d/3d, localization) with a robot (ROS bags included!). See <a href="http://wiki.ros.org/rtabmap_ros#Robot_mapping">SLAMDemo</a>. Example:</li>
-</ul>
-
-<p>February 2013</p>
-
-<ul>
-<li>Long paper accepted in <em>IEEE Transactions on Robotics</em>  (all papers <a href="http://introlab.github.io/rtabmap/#papers">below</a>). See RTAB-Map tested on 12 data sets!</li>
-</ul>
-
-<p>January 2013</p>
-
-<ul>
-<li>Added a <a href="https://github.com/introlab/rtabmap/wiki/Cplusplus-Loop-Closure-Detection">C++ usage example</a>.</li>
-<li>Integrated RTAB-Map with <a href="http://www.openslam.org/toro.html">TORO</a> to make a <strong>6D SLAM demo</strong>. See the page [SLAMDemo] if you want to try the demo. In this example, we use a hand-held Kinect sensor: we assemble incrementally the map depending on the 6D visual odometry (SIFT features are used), then when a loop closure is detected using RTAB-Map, TORO is used to optimize the map with the new constraint. </li>
-</ul>
-
-<p>December 2012</p>
-
-<ul>
-<li>Version 0.5.0.</li>
-<li>Moved all sensorimotor stuff to the new project <a href="http://semolearning.googlecode.com">SeMoLearning</a>. Now RTAB-Map contains only things about loop closure detection using a Bayesian bag-of-words approach, as in the RTAB-Map related <a href="https://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map#Publications">papers</a>. This also simplified the interface.</li>
-<li>I added a new option from the menu to print the detected loop closure IDs in the application console (in MATLAB matrix format, for fast copy/paste in MATLAB).</li>
-<li>Also, when generating the map using the menu action, a tip is printed in the application console to know how print a pdf from the ".dot" file with Graphiz: </li>
-</ul>
-
-<pre><code>neato -Tpdf Graph.dot -o out.pdf
-</code></pre>
-
-<p>May 2012</p>
-
-<ul>
-<li>Five new videos (720p) from other community data sets can be found on  <a href="http://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">RTAB-Map's page at IntRoLab</a>. </li>
-</ul>
-
-<p>March 2012</p>
-
-<ul>
-<li>Release 0.3.2: 
-
-<ul>
-<li>Simplified RTAB-Map's main parameters by adding a basic panel in Preferences.
-November 2011</li>
-</ul>
-</li>
-<li>I've made a simple interface to play with feature detectors and descriptors of OpenCV. See it at <a href="http://find-object.googlecode.com">Find-Object</a>.
-July 2011</li>
-<li>New videos with different data sets are added to the <a href="http://introlab.3it.usherbrooke.ca/mediawiki-introlab/index.php/RTAB-Map">home page</a>.</li>
 </ul>
       </section>
     </div>
